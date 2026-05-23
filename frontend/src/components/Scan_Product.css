@@ -1,0 +1,256 @@
+/* Scan_Product.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.max-w-lg {
+  max-width: 600px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.text-xl {
+  font-size: 1.5rem;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.border {
+  border: 1px solid #ccc;
+}
+
+.p-1 {
+  padding: .25rem;
+}
+
+.p-2 {
+  padding: .5rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.rounded {
+  border-radius: .375rem; /* Tailwind's rounded class */
+}
+
+.bg-red-500 {
+  background-color: #e3342f; /* Tailwind's red color */
+}
+
+.text-white {
+  color: #fff;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-64 {
+  height: 16rem; /* Tailwind's h-64 class */
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.mb-2 {
+  margin-bottom: .5rem; /* Tailwind's mb-2 class */
+}
+
+.mt-2 {
+  margin-top: .5rem; /* Tailwind's mt-2 class */
+}
+
+.mt-4 {
+  margin-top: 1rem; /* Tailwind's mt-4 class */
+}
+
+.text-sm {
+  font-size: .875rem; /* Tailwind's text-sm class */
+}
+
+.text-lg {
+  font-size: 1.125rem; /* Tailwind's text-lg class */
+}
+
+.text-green-600 {
+  color: #38a169; /* Tailwind's green color */
+}
+
+/* Input styles */
+input[type="text"] {
+    border-radius: .375rem;
+    border-width: thin;
+    transition: border-color .3s ease-in-out, box-shadow .3s ease-in-out;
+    padding-left: .5rem;
+    width: calc(100% - .5rem);
+}
+
+/* Input focus effect */
+input[type="text"]:focus {
+    outline: none;
+    border-color: #e3342f; /* Match the button color */
+    box-shadow: inset 0px 0px 0px 2px rgba(227,52,47,0.5);
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #c53030; /* Darker red on hover */
+}
+
+/* Centering the app container */
+.p-4.max-w-lg.mx-auto {
+    background-color: #fff; /* Add a white background for contrast */
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 6px, rgba(0,0,0,0.05) -1px -3px inset; /* Subtle shadow for depth */
+    border-radius: .5rem; /* Rounded corners for a modern look */
+}
+
+/* Enhanced Product List Styling */
+.products-container {
+  margin-top: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.products-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e3342f;
+}
+
+.products-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.375rem;
+  background-color: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.product-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-name {
+  font-weight: 500;
+  color: #2d3748;
+  margin-bottom: 0.25rem;
+}
+
+.product-location {
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+.product-price {
+  font-weight: 600;
+  color: #e3342f;
+  background-color: rgba(227, 52, 47, 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+}
+
+.checkout-button {
+  margin-top: 1rem;
+  background-color: #e3342f;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  width: 100%;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-shadow: 0 2px 4px rgba(227, 52, 47, 0.3);
+}
+
+.checkout-button:hover {
+  background-color: #c53030;
+}
+
+.product-empty {
+  text-align: center;
+  padding: 1.5rem;
+  color: #718096;
+  font-style: italic;
+}
+
+/* Add some subtle animation when new products are added */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.product-item {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 640px) {
+  .text-xl { 
+    font-size: 1.25rem; 
+  }
+  .text-lg { 
+    font-size: 1rem; 
+  }
+  .products-container {
+    padding: 0.75rem;
+  }
+  .product-item {
+    padding: 0.5rem;
+  }
+}
